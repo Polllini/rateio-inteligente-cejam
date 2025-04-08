@@ -17,18 +17,28 @@
     <meta name="twitter:site" content="@cejam" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
-    <!-- Script para GitHub Pages SPA routing -->
+    <!-- Script to redirect from GitHub Pages to the correct route -->
     <script type="text/javascript">
-      // Código para lidar com redirecionamento no GitHub Pages
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
+      // This script checks if we are being redirected from the 404.html page
+      (function() {
+        // Parse the URL
+        var loc = window.location;
+        
+        // Check if we need to redirect
+        if (loc.search) {
+          // If we have a query string that starts with ?/, extract the path
+          var redirectPath = loc.search.substring(2);
+          var path = redirectPath.split('&')[0];
+          
+          // Reconstruct the URL without the query string
+          var newUrl = loc.origin + loc.pathname + (path ? '#/' + path : '') + loc.hash;
+          
+          // Replace the current URL
+          window.history.replaceState(null, null, newUrl);
         }
       })();
     </script>
-    <script type="module" crossorigin src="/rateio-inteligente-cejam/assets/index-CeRE4S1D.js"></script>
+    <script type="module" crossorigin src="/rateio-inteligente-cejam/assets/index-D2SizrKq.js"></script>
     <link rel="stylesheet" crossorigin href="/rateio-inteligente-cejam/assets/index-BfI7gT9g.css">
   </head>
 
