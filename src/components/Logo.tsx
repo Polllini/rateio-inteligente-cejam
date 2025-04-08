@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <div className="flex items-center gap-3">
       <div className="h-10 w-auto">
         <img 
-          src="/lovable-uploads/a5328b80-2eec-46bb-8e49-4169ebe223bb.png"
+          src="lovable-uploads/a5328b80-2eec-46bb-8e49-4169ebe223bb.png"
           alt="CEJAM Logo" 
           className="h-full w-auto"
         />
