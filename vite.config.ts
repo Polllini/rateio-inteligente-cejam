@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "./", // Necessário para o GitHub Pages
+  base: "/rateio-inteligente-cejam/", // Configurado para o nome específico do repositório
   plugins: [
     react(),
     mode === 'development' &&
